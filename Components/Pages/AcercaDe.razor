@@ -1,0 +1,39 @@
+@page "/acerca-de"
+
+<PageTitle>Acerca de</PageTitle>
+
+<h1>Acerca del proyecto</h1>
+
+<p class="lead">
+    Blazor Web App (.NET 10, Interactive Server) que consume la API REST de Ziur y presenta los
+    movimientos de inventario en una grilla.
+</p>
+
+<div class="card mb-3">
+    <div class="card-header">Funcionalidad</div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">Consumo de la API real de Ziur (<code>DocumentosFillsCombos</code>).</li>
+        <li class="list-group-item">Búsqueda por código o descripción.</li>
+        <li class="list-group-item">Ordenamiento por columna (clic en el encabezado).</li>
+        <li class="list-group-item">Estados de carga, error con reintento y sin resultados.</li>
+    </ul>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">Arquitectura</div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item"><code>Models</code>: DTO <code>MovimientoInventario</code>.</li>
+        <li class="list-group-item"><code>Services</code>: <code>HttpClient</code> tipado con opciones validadas y manejo de errores (401/403, 404, 5xx, red, timeout, JSON).</li>
+        <li class="list-group-item"><code>Components/Pages</code>: interfaz de la grilla y esta página.</li>
+    </ul>
+</div>
+
+<div class="card mb-3">
+    <div class="card-header">Seguridad</div>
+    <div class="card-body">
+        El token Bearer se usa solo en el servidor (Blazor Server) y se almacena en User Secrets o
+        variables de entorno; nunca se expone al navegador ni se sube al repositorio.
+    </div>
+</div>
+
+<a class="btn btn-primary" href="">Volver a movimientos</a>

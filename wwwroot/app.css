@@ -2,18 +2,73 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+:root {
+    --bs-primary: #0f766e;
+    --bs-primary-rgb: 15, 118, 110;
+    --bs-link-color: #0f766e;
+    --bs-link-hover-color: #115e59;
+}
+
 a, .btn-link {
-    color: #006bb7;
+    color: #0f766e;
+}
+
+thead th {
+    background-color: #0f766e !important;
+    color: #fff !important;
+    user-select: none;
+}
+
+.card-header {
+    background-color: #d1fae5;
+    color: #134e4a;
+    font-weight: 600;
+}
+
+.btn {
+    border-radius: 2rem;
+    padding: 0.45rem 1.25rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    transition: transform 0.15s ease, box-shadow 0.15s ease, background-position 0.3s ease;
+}
+
+.btn:hover:not(:disabled) {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.18);
+}
+
+.btn:active:not(:disabled) {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #1b6ec2;
-    border-color: #1861ac;
+    background: linear-gradient(135deg, #0f766e 0%, #14b8a6 100%);
+    border: none;
+}
+
+.btn-primary:hover:not(:disabled), .btn-primary:focus {
+    color: #fff;
+    background: linear-gradient(135deg, #115e59 0%, #0d9488 100%);
+}
+
+.btn-outline-danger {
+    border-width: 2px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.9rem;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+  0 0 0 0.25rem #2dd4bf;
 }
 
 .content {
